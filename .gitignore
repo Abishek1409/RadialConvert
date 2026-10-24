@@ -1,0 +1,24 @@
+bin/
+obj/
+.vs/
+*.user
+# Local SDK installed by dotnet-install.ps1
+.dotnet/
+# Third-party tool binaries are downloaded/built, not committed
+tools/*
+!tools/README.md
+# pdf2docx helper build output
+helpers/pdf2docx/.venv/
+helpers/pdf2docx/build/
+helpers/pdf2docx/dist/
+# Downloaded installers in the repo root
+/*.exe
+/*.zip
+/*.7z
+/*.msi
+# Archives extracted in the repo root
+/ffmpeg-*/
+/Inno Setup 6/
+# Installer staging and output
+installer/stage/
+installer/output/

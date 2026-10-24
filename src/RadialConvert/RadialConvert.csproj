@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <!-- WinForms is only used for the tray NotifyIcon (built into Windows, free). -->
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <!-- Disabled to avoid WPF/WinForms type ambiguities (Application, MessageBox, ...). -->
+    <ImplicitUsings>disable</ImplicitUsings>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AssemblyName>RadialConvert</AssemblyName>
+    <RootNamespace>RadialConvert</RootNamespace>
+    <!-- WFAC010: WinForms prefers its own DPI API, but this is a WPF app; the manifest is the right place. -->
+    <NoWarn>$(NoWarn);WFAC010</NoWarn>
+    <Version>0.3.0</Version>
+    <!-- The installer script publishes with CopyTools=false and stages a trimmed tools folder itself. -->
+    <CopyTools Condition="'$(CopyTools)' == ''">true</CopyTools>
+    <Product>RadialConvert</Product>
+    <Description>Modifier + double-click radial file converter for Windows Explorer.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="RadialConvert.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- MIT licensed; used to build PPTX files from rendered PDF pages. -->
+    <PackageReference Include="DocumentFormat.OpenXml" Version="3.1.1" />
+  </ItemGroup>
+
+  <!-- Copy everything under /tools (ImageMagick, resvg, ...) next to the exe. -->
+  <ItemGroup Condition="'$(CopyTools)' == 'true'">
+    <None Include="..\..\tools\**\*" Link="tools\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

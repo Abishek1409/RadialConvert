@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6BF1B614-0E40-43CE-B5F1-309DA181C30D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadialConvert", "src\RadialConvert\RadialConvert.csproj", "{61E13526-865A-4B11-BB61-4E8192F05627}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{47660E75-5E11-4D0F-A7CC-F53565971D8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadialConvert.Tests", "tests\RadialConvert.Tests\RadialConvert.Tests.csproj", "{F12C2566-0FFF-4777-9DE0-FB04346D0424}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61E13526-865A-4B11-BB61-4E8192F05627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61E13526-865A-4B11-BB61-4E8192F05627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61E13526-865A-4B11-BB61-4E8192F05627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61E13526-865A-4B11-BB61-4E8192F05627}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F12C2566-0FFF-4777-9DE0-FB04346D0424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F12C2566-0FFF-4777-9DE0-FB04346D0424}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F12C2566-0FFF-4777-9DE0-FB04346D0424}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F12C2566-0FFF-4777-9DE0-FB04346D0424}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{61E13526-865A-4B11-BB61-4E8192F05627} = {6BF1B614-0E40-43CE-B5F1-309DA181C30D}
+		{F12C2566-0FFF-4777-9DE0-FB04346D0424} = {47660E75-5E11-4D0F-A7CC-F53565971D8D}
+	EndGlobalSection
+EndGlobal

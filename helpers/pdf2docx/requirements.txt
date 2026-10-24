@@ -1,0 +1,10 @@
+# Pinned: newer PyMuPDF 2.x / OpenCV 5 / NumPy 2.5 break inside PyInstaller
+# ("cannot load module more than once per process").
+pdf2docx==0.5.8
+PyMuPDF==1.24.14
+opencv-python-headless==4.10.0.84
+numpy==1.26.4
+python-docx==1.1.2
+fonttools==4.55.0
+fire==0.7.0
+pyinstaller==6.11.1
